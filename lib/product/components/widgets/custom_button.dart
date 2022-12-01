@@ -1,3 +1,4 @@
+import 'package:amazon_clone/core/extensions/context_extension.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
@@ -7,9 +8,18 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-        onPressed: onTap,
-        style: ElevatedButton.styleFrom(minimumSize: const Size(double.infinity, 50)),
-        child: Text(text));
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: double.infinity,
+        height: 50,
+        decoration: BoxDecoration(borderRadius: context.borderlowRadius, color: context.theme.primaryColor),
+        child: Center(
+            child: Text(
+          text,
+          style: context.textTheme.button,
+        )),
+      ),
+    );
   }
 }

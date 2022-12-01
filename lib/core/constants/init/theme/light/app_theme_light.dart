@@ -16,7 +16,6 @@ class AppThemeLight extends AppTheme with ILightTheme {
         fontFamily: GoogleFonts.montserrat().fontFamily,
         primaryColor: colorThemeLight!.primaryColor,
         colorScheme: colorThemeLight!.colorScheme,
-        backgroundColor: colorThemeLight!.backgroundColor,
         scaffoldBackgroundColor: colorThemeLight!.greyBackgroundColor,
         brightness: Brightness.light,
         textTheme: textTheme(),
@@ -24,12 +23,14 @@ class AppThemeLight extends AppTheme with ILightTheme {
 
   TextTheme textTheme() {
     return TextTheme(
-        headline1: textThemeDark!.headline1,
-        headline2: textThemeDark!.headline2,
-        headline3: textThemeDark!.headline3,
-        headline4: textThemeDark!.headline4,
-        overline: textThemeDark!.overline,
-        bodyText1: textThemeDark!.bodyText1,
-        bodyText2: textThemeDark!.bodyText2);
+      headline1: textThemeLight!.headline1,
+      headline2: textThemeLight!.headline2,
+      headline3: textThemeLight!.headline3,
+      headline4: textThemeLight!.headline4,
+      overline: textThemeLight!.overline,
+      bodyText1: textThemeLight!.bodyText1,
+      bodyText2: textThemeLight!.bodyText2,
+      button: textThemeLight!.bodyText3,
+    );
   }
 }

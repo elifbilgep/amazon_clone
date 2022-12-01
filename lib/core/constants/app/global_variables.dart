@@ -1,1 +1,1 @@
-const String uri = 'http://<yourip>:3000';
+const String uri = 'http://localhost:3000';

@@ -1,1 +1,0 @@
-enum Auth { signin, signup }

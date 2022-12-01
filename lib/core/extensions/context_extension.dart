@@ -13,7 +13,7 @@ extension MediaQueryExtension on BuildContext {
 
   double get lowValue => width * 0.01;
   double get normalValue => width * 0.1;
-  double get mediumValue => height * 0.033;
+  double get mediumValue => height * 0.02;
   double get highValue => height * 0.1;
 
   double dynamicWidth(double val) => width * val;
@@ -68,9 +68,9 @@ extension RadiusExtension on BuildContext {
   Radius get lowRadius => Radius.circular(width * 0.02);
   Radius get normalRadius => Radius.circular(width * 0.05);
   Radius get highadius => Radius.circular(width * 0.1);
-  BorderRadius get borderlowRadius => BorderRadius.circular(width * 0.02);
-  BorderRadius get bordernormalRadius => BorderRadius.circular(width * 0.05);
-  BorderRadius get borderhighadius => BorderRadius.circular(width * 0.1);
+  BorderRadius get borderlowRadius => BorderRadius.circular(5);
+  BorderRadius get bordernormalRadius => BorderRadius.circular(10);
+  BorderRadius get borderhighadius => BorderRadius.circular(20);
 }
 
 extension ColorExtension on BuildContext {

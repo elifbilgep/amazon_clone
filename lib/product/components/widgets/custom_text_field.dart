@@ -7,18 +7,20 @@ class CustomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(10.0),
-      child: TextFormField(
-        controller: controller,
-        validator: (value) {},
-        decoration: InputDecoration(
-            hintText: hintText,
-            fillColor: Colors.grey.shade100,
-            filled: true,
-            border: const OutlineInputBorder(borderSide: BorderSide.none),
-            enabledBorder: const OutlineInputBorder(borderSide: BorderSide.none)),
-      ),
+    return TextFormField(
+      controller: controller,
+      validator: (val) {
+        if (val == null || val.isEmpty) {
+          return 'Enter Your $hintText';
+        }
+        return null;
+      },
+      decoration: InputDecoration(
+          hintText: hintText,
+          fillColor: Colors.grey.shade100,
+          filled: true,
+          border: const OutlineInputBorder(borderSide: BorderSide.none),
+          enabledBorder: const OutlineInputBorder(borderSide: BorderSide.none)),
     );
   }
 }
