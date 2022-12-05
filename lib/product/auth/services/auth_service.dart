@@ -49,8 +49,7 @@ class AuthService {
             SharedPreferences prefs = await SharedPreferences.getInstance();
             Provider.of<UserProvider>(context, listen: false).setUser(res.body);
             await prefs.setString('x-auth-token', jsonDecode(res.body)['token']);
-
-            Navigator.pushNamed(context, "/home");
+            Navigator.pushNamedAndRemoveUntil(context, "/bottomBar", ((route) => false));
           });
     } catch (e) {
       showSnackBar(context, e.toString());
