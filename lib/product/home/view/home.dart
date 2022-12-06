@@ -1,10 +1,9 @@
-import 'package:amazon_clone/core/constants/image/image_constants.dart';
-import 'package:amazon_clone/core/extensions/context_extension.dart';
 import 'package:amazon_clone/core/providers/user_provider.dart';
 import 'package:amazon_clone/product/home/view/widgets/address_box.dart';
 import 'package:amazon_clone/product/home/view/widgets/carousel_image.dart';
 import 'package:amazon_clone/product/home/view/widgets/deal_of_day.dart';
 import 'package:amazon_clone/product/home/view/widgets/home_app_bar.dart';
+import 'package:amazon_clone/product/home/view/widgets/sale_off_image.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -28,18 +27,7 @@ class _HomeViewState extends State<HomeView> {
         ),
         body: SingleChildScrollView(
           child: Column(
-            children: [
-              AddressBox(),
-              Container(
-                child: Image.asset(
-                  ImageConstants.instance.toPng("fallof"),
-                  width: context.width,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              CarouselImage(),
-              DealOfDay()
-            ],
+            children: const [AddressBox(), SaleOffImage(), CarouselImage(), DealOfDay()],
           ),
         ));
   }

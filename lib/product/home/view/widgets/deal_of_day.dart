@@ -20,7 +20,7 @@ class _DealOfDayState extends State<DealOfDay> {
           padding: context.paddingMediumAll,
           child: Text(
             _dealOfTheDayText,
-            style: context.textTheme.bodyText1,
+            style: context.textTheme.bodyText1!.copyWith(fontWeight: FontWeight.w700, wordSpacing: 0.01),
           ),
         ),
         Image.network(
@@ -35,17 +35,19 @@ class _DealOfDayState extends State<DealOfDay> {
             left: context.mediumValue,
             top: context.mediumValue,
           ),
-          child: Text("\$999"),
+          child: Text(
+            "\$999",
+            style: context.textTheme.bodyText2,
+          ),
         ),
         Container(
           alignment: Alignment.topLeft,
-          padding: EdgeInsets.only(
-            left: context.mediumValue,
-          ),
-          child: const Text(
+          padding: EdgeInsets.only(left: context.mediumValue, bottom: context.mediumValue),
+          child: Text(
             "Ipad",
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
+            style: context.textTheme.bodyText2!.copyWith(fontWeight: FontWeight.w400),
           ),
         )
       ],
