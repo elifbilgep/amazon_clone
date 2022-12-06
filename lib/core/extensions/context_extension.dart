@@ -59,9 +59,6 @@ extension PaddingExtensionSymmetric on BuildContext {
   EdgeInsets get paddingNormalHorizontal => EdgeInsets.symmetric(horizontal: normalValue);
   EdgeInsets get paddingMediumHorizontal => EdgeInsets.symmetric(horizontal: mediumValue);
   EdgeInsets get paddingHighHorizontal => EdgeInsets.symmetric(horizontal: highValue);
-
-  EdgeInsets get paddingLowOnly =>
-      EdgeInsets.only(left: lowValue, bottom: lowValue, top: normalValue * 2, right: lowValue);
 }
 
 extension RadiusExtension on BuildContext {

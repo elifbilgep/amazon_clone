@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'color_theme_light.dart';
 
 class TextThemeLight {
@@ -19,8 +18,19 @@ class TextThemeLight {
       fontSize: 18, fontWeight: FontWeight.w600, letterSpacing: 0.25, color: ColorThemeLight.instance!.textColor);
   final TextStyle overline = TextStyle(
       fontSize: 12, fontWeight: FontWeight.w100, letterSpacing: 0.5, color: ColorThemeLight.instance!.textColor);
-  final TextStyle bodyText1 = const TextStyle(fontSize: 16, fontWeight: FontWeight.w600, letterSpacing: 0.5);
-  final TextStyle bodyText2 = const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, letterSpacing: 0.25);
-  final TextStyle bodyText3 =
-      const TextStyle(fontSize: 16, fontWeight: FontWeight.w600, letterSpacing: 0.25, color: Colors.white);
+  final TextStyle bodyText1 = const TextStyle(
+    fontFamily: "Amazon Amber",
+    fontSize: 20,
+    fontWeight: FontWeight.w600,
+  );
+  final TextStyle bodyText2 = const TextStyle(
+    fontFamily: "Amazon Amber",
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+  );
+  final TextStyle bodyText3 = const TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
+    fontFamily: "Amazon Amber",
+  );
 }

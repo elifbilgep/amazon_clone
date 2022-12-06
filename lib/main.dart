@@ -4,7 +4,6 @@ import 'package:amazon_clone/core/providers/user_provider.dart';
 import 'package:amazon_clone/product/auth/services/auth_service.dart';
 import 'package:amazon_clone/product/auth/sign_up/view/sign_up_view.dart';
 import 'package:amazon_clone/product/components/widgets/bottom_bar.dart';
-import 'package:amazon_clone/product/home/view/home.dart';
 import 'package:amazon_clone/product/home/view_model/home_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
