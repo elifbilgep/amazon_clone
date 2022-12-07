@@ -30,7 +30,7 @@ class TextThemeLight {
   );
   final TextStyle bodyText3 = const TextStyle(
     fontSize: 16,
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w400,
     fontFamily: "Amazon Amber",
   );
 }

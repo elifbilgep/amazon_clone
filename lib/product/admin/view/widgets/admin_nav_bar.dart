@@ -3,10 +3,10 @@ import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../home/view_model/home_view_model.dart';
+import '../../view_model/admin_view_model.dart';
 
-class CustomUserNavBar extends StatefulWidget {
-  const CustomUserNavBar({
+class AdminNavBar extends StatelessWidget {
+  const AdminNavBar({
     Key? key,
   }) : super(key: key);
 
@@ -14,14 +14,8 @@ class CustomUserNavBar extends StatefulWidget {
   static const double _bottomBarBorderW = 5;
 
   @override
-  State<CustomUserNavBar> createState() => _CustomUserNavBarState();
-}
-
-class _CustomUserNavBarState extends State<CustomUserNavBar> {
-  @override
   Widget build(BuildContext context) {
-    int _currPage = Provider.of<HomeViewModel>(context).pageNoView;
-    var theme;
+    int _currPage = Provider.of<AdminViewModel>(context).pageNo;
     return BottomNavigationBar(
       iconSize: 28,
       currentIndex: _currPage,
@@ -29,18 +23,18 @@ class _CustomUserNavBarState extends State<CustomUserNavBar> {
       unselectedItemColor: context.theme.colorScheme.onSecondary,
       backgroundColor: context.theme.colorScheme.background,
       onTap: (value) {
-        Provider.of<HomeViewModel>(context, listen: false).updatePage(value);
+        Provider.of<AdminViewModel>(context, listen: false).updatePageNo(value);
       },
       items: [
         BottomNavigationBarItem(
           label: '',
           icon: Container(
-            width: CustomUserNavBar._bottomNavBarW,
+            width: _bottomNavBarW,
             decoration: BoxDecoration(
               border: Border(
                 top: BorderSide(
                     color: _currPage == 0 ? context.theme.colorScheme.onPrimary : context.theme.colorScheme.background,
-                    width: CustomUserNavBar._bottomBarBorderW),
+                    width: _bottomBarBorderW),
               ),
             ),
             child: const Icon(Icons.home_outlined),
@@ -49,33 +43,29 @@ class _CustomUserNavBarState extends State<CustomUserNavBar> {
         BottomNavigationBarItem(
           label: '',
           icon: Container(
-            width: CustomUserNavBar._bottomNavBarW,
+            width: _bottomNavBarW,
             decoration: BoxDecoration(
               border: Border(
                 top: BorderSide(
                     color: _currPage == 1 ? context.theme.colorScheme.onPrimary : context.theme.colorScheme.background,
-                    width: CustomUserNavBar._bottomBarBorderW),
+                    width: _bottomBarBorderW),
               ),
             ),
-            child: const Icon(Icons.person_outline_outlined),
+            child: const Icon(Icons.analytics_outlined),
           ),
         ),
         BottomNavigationBarItem(
           label: '',
           icon: Container(
-            width: CustomUserNavBar._bottomNavBarW,
+            width: _bottomNavBarW,
             decoration: BoxDecoration(
               border: Border(
                 top: BorderSide(
                     color: _currPage == 2 ? context.theme.colorScheme.onPrimary : context.theme.colorScheme.background,
-                    width: CustomUserNavBar._bottomBarBorderW),
+                    width: _bottomBarBorderW),
               ),
             ),
-            child: Badge(
-                elevation: 0,
-                badgeColor: Colors.white,
-                badgeContent: const Text("2"),
-                child: const Icon(Icons.shopping_cart_outlined)),
+            child: const Icon(Icons.all_inbox_outlined),
           ),
         )
       ],

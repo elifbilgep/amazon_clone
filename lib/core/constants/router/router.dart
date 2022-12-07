@@ -1,5 +1,6 @@
 import 'package:amazon_clone/core/constants/app/app_router_constants.dart';
-import 'package:amazon_clone/product/components/widgets/bottom_bar.dart';
+import 'package:amazon_clone/product/admin/view/posts/view/add_post_view.dart';
+import 'package:amazon_clone/product/components/widgets/user_bottom_bar.dart';
 import 'package:amazon_clone/product/home/view/home.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +27,12 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
     case RouterConstants.BOTTOM_BAR:
       return MaterialPageRoute(
         settings: routeSettings,
-        builder: (_) => BottomBar(),
+        builder: (_) => UserBottomBar(),
+      );
+    case RouterConstants.ADD_POST_VIEW:
+      return MaterialPageRoute(
+        settings: routeSettings,
+        builder: (_) => const AddPostsView(),
       );
     default:
       return MaterialPageRoute(

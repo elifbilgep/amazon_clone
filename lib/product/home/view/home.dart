@@ -4,6 +4,7 @@ import 'package:amazon_clone/product/home/view/widgets/carousel_image.dart';
 import 'package:amazon_clone/product/home/view/widgets/deal_of_day.dart';
 import 'package:amazon_clone/product/home/view/widgets/home_app_bar.dart';
 import 'package:amazon_clone/product/home/view/widgets/sale_off_image.dart';
+import 'package:amazon_clone/product/home/view/widgets/top_categories.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -27,7 +28,13 @@ class _HomeViewState extends State<HomeView> {
         ),
         body: SingleChildScrollView(
           child: Column(
-            children: const [AddressBox(), SaleOffImage(), CarouselImage(), DealOfDay()],
+            children: const [
+              TopCategories(),
+              AddressBox(),
+              SaleOffImage(),
+              CarouselImage(),
+              DealOfDay(),
+            ],
           ),
         ));
   }

@@ -26,7 +26,7 @@ class ColorThemeLight {
         onPrimary: selectedNavBarColor,
         onError: errorColor,
         onSecondary: unselectedNavBarColor,
-        onSurface: backgroundColor,
+        onSurface: textColor,
         secondary: backgroundColor,
       );
 }

@@ -17,4 +17,6 @@ class GlobalVariables {
       Color.fromARGB(255, 162, 236, 233),
     ],
   );
+
+  static const List<String> productCategories = ["Mobiles", "Essentials", "Appliances", "Books", "Fashion"];
 }

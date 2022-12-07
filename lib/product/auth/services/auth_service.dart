@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:amazon_clone/core/constants/app/error_handling.dart';
 import 'package:amazon_clone/core/constants/app/global_variables.dart';
 import 'package:amazon_clone/core/providers/user_provider.dart';
-import 'package:amazon_clone/core/utils/custom_snackbar.dart';
+import 'package:amazon_clone/core/utils/utils.dart';
 import 'package:amazon_clone/core/utils/shared_prefs.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

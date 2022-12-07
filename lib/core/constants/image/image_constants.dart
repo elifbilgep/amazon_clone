@@ -16,5 +16,14 @@ class ImageConstants {
     'https://images-na.ssl-images-amazon.com/images/G/31/img21/shoes/September/SSW/pc-header._CB641971330_.jpg',
   ];
 
+  static const List<Map<String, String>> topCategories = [
+    {'title': "Mobiles", 'image': 'mobile'},
+    {'title': "Essentials", 'image': 'essential'},
+    {'title': "Appliances", 'image': 'fridge'},
+    {'title': "Books", 'image': 'books'},
+    {'title': "Fashion", 'image': 'fashion'}
+  ];
+
   String toPng(String imageName) => "assets/images/$imageName.png";
+  String toPngIcons(String imageName) => "assets/icons/$imageName.png";
 }

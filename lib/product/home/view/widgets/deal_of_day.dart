@@ -16,11 +16,19 @@ class _DealOfDayState extends State<DealOfDay> {
     return Column(
       children: [
         Container(
-          alignment: Alignment.topLeft,
           padding: context.paddingMediumAll,
-          child: Text(
-            _dealOfTheDayText,
-            style: context.textTheme.bodyText1!.copyWith(fontWeight: FontWeight.w700, wordSpacing: 0.01),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                _dealOfTheDayText,
+                style: context.textTheme.bodyText1!.copyWith(fontWeight: FontWeight.w700, wordSpacing: 0.01),
+              ),
+              Text(
+                "See All Deals",
+                style: context.textTheme.button!.copyWith(color: context.colors.onPrimary),
+              )
+            ],
           ),
         ),
         Image.network(

@@ -8,19 +8,19 @@ import '../../home/view_model/home_view_model.dart';
 import 'custom_nav_bar.dart';
 
 // ignore: must_be_immutable
-class BottomBar extends StatefulWidget with ILightTheme {
-  BottomBar({super.key});
+class UserBottomBar extends StatefulWidget with ILightTheme {
+  UserBottomBar({super.key});
 
   @override
-  State<BottomBar> createState() => _BottomBarState();
+  State<UserBottomBar> createState() => _UserBottomBarState();
 }
 
-class _BottomBarState extends State<BottomBar> {
+class _UserBottomBarState extends State<UserBottomBar> {
   @override
   Widget build(BuildContext context) {
     int _currPage = Provider.of<HomeViewModel>(context).pageNoView;
 
-    return Scaffold(body: pages[_currPage], bottomNavigationBar: const CustomNavBar());
+    return Scaffold(body: pages[_currPage], bottomNavigationBar: const CustomUserNavBar());
   }
 
   List<Widget> pages = [
