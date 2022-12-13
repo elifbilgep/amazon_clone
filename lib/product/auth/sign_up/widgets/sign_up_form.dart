@@ -48,9 +48,9 @@ class _FormWidgetState extends State<FormWidget> {
             const CustomHeadline(
               text: TextConstants.signUpHeadline,
             ),
-            CustomTextField(controller: _nameEditingController, hintText: "Name"),
-            CustomTextField(controller: _emailEditingController, hintText: "Email"),
-            CustomTextField(controller: _passwordEditingController, hintText: "Password"),
+            CustomTextField(controller: _nameEditingController, hintText: "Name", obscureText: false),
+            CustomTextField(controller: _emailEditingController, hintText: "Email", obscureText: false),
+            CustomTextField(controller: _passwordEditingController, hintText: "Password", obscureText: true),
             CustomButton(
                 text: "SIGN UP",
                 onTap: () {

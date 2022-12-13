@@ -33,14 +33,15 @@ class _AddProductFormFieldState extends State<AddProductFormField> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          CustomTextField(controller: _productNameController, hintText: "Product Name"),
+          CustomTextField(controller: _productNameController, hintText: "Product Name", obscureText: false),
           CustomTextField(
             controller: _productNameController,
             hintText: "Description",
             maxLines: 5,
+            obscureText: false
           ),
-          CustomTextField(controller: _productNameController, hintText: "Price "),
-          CustomTextField(controller: _productNameController, hintText: "Quantity "),
+          CustomTextField(controller: _productNameController, hintText: "Price ", obscureText: true),
+          CustomTextField(controller: _productNameController, hintText: "Quantity ", obscureText: true),
         ],
       ),
     );

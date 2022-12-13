@@ -38,8 +38,8 @@ class _SignInFormWidgetState extends State<SignInFormWidget> {
               const CustomHeadline(
                 text: TextConstants.signInHeadline,
               ),
-              CustomTextField(controller: _emailEditingController, hintText: "Name"),
-              CustomTextField(controller: _passwordEditingController, hintText: "Password"),
+              CustomTextField(controller: _emailEditingController, hintText: "Name", obscureText: false),
+              CustomTextField(controller: _passwordEditingController, hintText: "Password", obscureText: true),
               CustomButton(
                   text: "SIGN IN",
                   onTap: () {
